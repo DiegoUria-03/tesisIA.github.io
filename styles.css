@@ -1,0 +1,165 @@
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+* , *:before , *:after {
+    box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Inter", sans-serif;;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    font-size: 2.5rem;
+    
+
+    
+}
+h3{
+    font-size: 1.9rem;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.contenedor{
+    max-width: 110rem;
+    margin: 0 auto;
+    width: 90%;
+}
+#header{
+    background-image: linear-gradient(#00000066 ,  #00000063) , url(./img/bot-inteligencia-artificial-1.jpg);
+    background-size: cover;
+    min-height: 80rem;
+    color: white;
+    padding: 5rem 0;
+    height: 100vh;
+}
+.navbar{
+    
+    display: flex;
+    gap: 7.2rem;
+    
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 10rem;
+    justify-content: flex-end;
+}
+.navbar li a{
+    position: relative;
+    transition: all 300ms;
+}
+.navbar li{
+    transition: all 300ms;
+}
+.navbar li:hover{
+    transform: scale(1.1 , 1.1);
+}
+.navbar li a::before{
+    content: '';
+    background-color: aliceblue;
+    position: absolute;
+    width: 100%;
+    height: .01rem;
+    top: 2.3rem;
+    opacity: 0;
+    transition: all 300ms;
+    
+}
+.navbar li a:hover::before{
+    opacity: 1;
+}
+
+
+
+
+
+.contenido-header{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+}
+.parrafo{
+    grid-row:2/3 ;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.parrafo a{
+    background-color: white;
+    color: black;
+    width: 25rem;
+    height: 5rem;
+    padding: .3rem 5rem;
+    position: relative;
+    top: 2rem;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    
+}
+
+
+.taglines h1{
+    margin-top: -5.5rem;
+    font-size: 22rem;
+    font-weight: 100;
+    line-height: 1;
+}
+.taglines h2{
+    font-weight: 200;
+    line-height: 1.5;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    
+}
+
+@media(max-width:768px){
+    
+    #header{
+        background-position: center;
+        padding-top: 15rem;
+        padding-left: 1rem;
+    }
+    
+    
+    .navbar{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 3rem;
+        font-size: 2.1rem;
+        display: none;
+    }
+
+    .taglines h1{
+        font-size: 16rem;
+        
+    }
+    .taglines h2{
+        font-size: 3.8rem;
+        
+    }
+    
+    .parrafo a{
+        border-radius: .5rem;
+        transition: all 300ms;
+    }
+    
+}
